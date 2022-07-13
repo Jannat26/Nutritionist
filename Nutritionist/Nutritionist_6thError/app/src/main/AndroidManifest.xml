@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hasu.Neutritionist">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/health_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/health_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ViewListContents"
+            android:label="Nutrition Facts"
+            android:parentActivityName=".CalorieInputTracker">
+            <intent-filter android:label="Nutrition Fact">
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalorieInputTracker"
+            android:label="Daily Calories Tracker"
+            android:parentActivityName=".MainActivity">
+            <intent-filter android:label="Daily Calories Tracker">
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalorieCount"
+            android:label="BMR Calculator"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".BMIActivity"
+            android:label="@string/body_mass_index"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HeartRatesActivity"
+            android:label="@string/heart_rate_calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HealthTipActivity"
+            android:label="@string/health_tips"
+            android:parentActivityName=".HeartRatesActivity">
+            <intent-filter android:label="@string/health_tips">
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

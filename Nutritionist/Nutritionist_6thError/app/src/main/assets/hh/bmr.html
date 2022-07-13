@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <style type="text/css">
+    input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div>
+
+          <a href="#" class="brand-logo left">BMR Calculator!</a>
+        </div>
+    </nav>
+  </header>
+  <br>
+  <span>
+  <div class="container">
+    <div class="card center" >
+<form action="#">
+  <p>Your gender: </p>
+  <input type="radio" id="gender" name="gender" value="masc"> Male<br>
+  <input type="radio" id="gender" name="gender" value="Female"> Female<br><br>
+  Age(in years):<br>
+  <input type="number" id="age" value=" "><br><br>
+  Height(in cm):<br>
+  <input type="number" id="height" value=" "><br><br>
+  Weight (in kg):<br>
+  <input type="number" id="weigth" value=""><br><br>
+</form>
+</div>
+</div>
+</span>
+<div class="conainer">
+<button type="button"
+onclick="">
+Result</button>
+<p>Your BMR is: </p>
+<p id="lblResult">0.00</p>
+  </div>
+  <script>
+var bmr;
+
+
+    
+function calc() {
+  var age = document.getElementById("age").value;
+  var gender = document.getElementById("gender").value;
+  var height = document.getElementById("height").value;
+  var weigth = document.getElementById("weigth").value;
+  if (gender == "masc") {
+  bmr = 66.5 + ( 13.75 * weigth ) + ( 5.003 * height ) - ( 6.755 * age );
+  }
+  else {
+  bmr = 655.1 + ( 9.563 * weigth ) + ( 1.850 * height ) - ( 4.676 * age );
+  } 
+}
+
+    
+    
+
+document.getElementsByTagName("button")[0].addEventListener("click", function() {
+  calc();
+  document.getElementById('lblResult').innerHTML = bmr;
+
+})
+
+ 
+    
+
+</script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "905467263397",
+    "firebase_url": "https://trial3-14520.firebaseio.com",
+    "project_id": "trial3-14520",
+    "storage_bucket": "trial3-14520.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905467263397:android:a0a45512109c6c6a43504c",
+        "android_client_info": {
+          "package_name": "com.example.hasu.Neutritionist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905467263397-d5e2hiup1208lj1gv110791tplnvn7n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1il8ivcrHQ9YlGE5F-rVirNVmyqhGcFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905467263397-d5e2hiup1208lj1gv110791tplnvn7n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
